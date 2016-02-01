@@ -1,0 +1,316 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY swrl "http://www.w3.org/2003/11/swrl#" >
+    <!ENTITY swrlb "http://www.w3.org/2003/11/swrlb#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY untitled-ontology-44 "http://www.semanticweb.org/djogo/ontologies/2014/8/untitled-ontology-44#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/djogo/ontologies/2014/8/untitled-ontology-44#"
+     xml:base="http://www.semanticweb.org/djogo/ontologies/2014/8/untitled-ontology-44"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:untitled-ontology-44="http://www.semanticweb.org/djogo/ontologies/2014/8/untitled-ontology-44#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/djogo/ontologies/2014/8/untitled-ontology-44"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/djogo/ontologies/2014/8/untitled-ontology-44#prop1 -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-44;prop1">
+        <rdfs:comment>subproperty working</rdfs:comment>
+        <owl:inverseOf rdf:resource="&untitled-ontology-44;prop2"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/djogo/ontologies/2014/8/untitled-ontology-44#prop2 -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-44;prop2">
+        <rdfs:comment>inverse working</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/djogo/ontologies/2014/8/untitled-ontology-44#prop3 -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-44;prop3">
+        <rdfs:comment>rule working</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/djogo/ontologies/2014/8/untitled-ontology-44#subprop1 -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-44;subprop1">
+        <rdfs:subPropertyOf rdf:resource="&untitled-ontology-44;prop1"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/djogo/ontologies/2014/8/untitled-ontology-44#icanhaz -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-44;icanhaz"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/djogo/ontologies/2014/8/untitled-ontology-44#OtherClass -->
+
+    <owl:Class rdf:about="&untitled-ontology-44;OtherClass">
+        <rdfs:comment>inferred instances: i1</rdfs:comment>
+        <rdfs:comment>axiom working</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/djogo/ontologies/2014/8/untitled-ontology-44#Parent -->
+
+    <owl:Class rdf:about="&untitled-ontology-44;Parent">
+        <rdfs:comment>inferred instances: i1 i2</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/djogo/ontologies/2014/8/untitled-ontology-44#Subclass -->
+
+    <owl:Class rdf:about="&untitled-ontology-44;Subclass">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-44;Parent"/>
+        <rdfs:comment>inferred instances i1
+asseted instances i2</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/djogo/ontologies/2014/8/untitled-ontology-44#Subsubclass -->
+
+    <owl:Class rdf:about="&untitled-ontology-44;Subsubclass">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-44;Subclass"/>
+        <rdfs:comment>asserted instance: i1
+</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/djogo/ontologies/2014/8/untitled-ontology-44#i1 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-44;i1">
+        <rdf:type rdf:resource="&untitled-ontology-44;Subsubclass"/>
+        <icanhaz rdf:datatype="&xsd;string">cheezburguer</icanhaz>
+        <rdfs:comment>inferred: OtherClass, Subclass
+prop1 i2
+prop3 i2
+sameas i3</rdfs:comment>
+        <subprop1 rdf:resource="&untitled-ontology-44;i2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/djogo/ontologies/2014/8/untitled-ontology-44#i2 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-44;i2">
+        <rdf:type rdf:resource="&untitled-ontology-44;Subclass"/>
+        <icanhaz rdf:datatype="&xsd;string">potato</icanhaz>
+        <rdfs:comment>inferred: potato
+prop2 i1</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/djogo/ontologies/2014/8/untitled-ontology-44#i3 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-44;i3">
+        <icanhaz rdf:datatype="&xsd;string">cheezburguer</icanhaz>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:Class>
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-44;OtherClass"/>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-44;Parent"/>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&untitled-ontology-44;prop1"/>
+                <owl:someValuesFrom rdf:resource="&owl;Thing"/>
+            </owl:Restriction>
+        </owl:intersectionOf>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="urn:swrl#x">
+        <rdf:type rdf:resource="&swrl;Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#y">
+        <rdf:type rdf:resource="&swrl;Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#z">
+        <rdf:type rdf:resource="&swrl;Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#a">
+        <rdf:type rdf:resource="&swrl;Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#b">
+        <rdf:type rdf:resource="&swrl;Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&swrl;Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&untitled-ontology-44;icanhaz"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#y"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                        <rdf:rest rdf:resource="&rdf;nil"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="&untitled-ontology-44;icanhaz"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#y"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#z"/>
+                            </rdf:Description>
+                        </rdf:first>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;SameIndividualAtom"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#x"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#z"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&swrl;Imp"/>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&untitled-ontology-44;prop3"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#a"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#b"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:head>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="&untitled-ontology-44;Parent"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#a"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                        <rdf:rest rdf:resource="&rdf;nil"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="&untitled-ontology-44;prop1"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#a"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#b"/>
+                            </rdf:Description>
+                        </rdf:first>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
